@@ -1,0 +1,36 @@
+<script src ="detalhe.js"></script>
+
+
+<div class="bb">
+
+
+  <div class="card mb-3" style="max-width: 1400px;">
+    <div class="row no-gutters">
+        <img [src]="juegos.results[0].background_image" class="card-img" alt="...">
+      <div class="card-img-overlay">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{juegos.results[0].name}}</h5>
+    <p class="card-text">Lançamento: {{juegos.results[0].released}}</p>
+
+    <p class="card-text"> Plataformas: {{juegos.results[0].platforms[0].platform.name}}, {{juegos.results[0].platforms[1].platform.name}}, {{juegos.results[0].platforms[2].platform.name}}, {{juegos.results[0].platforms[3].platform.name}} , {{juegos.results[0].platforms[4].platform.name}} </p>
+    <p class="card-text"> Gêneros: {{juegos.results[0].genres[1].name}}, {{juegos.results[0].genres[0].name}}, {{juegos.results[0].genres[2].name}}</p>
+    <p class="card-text"> Rating: {{juegos.results[0].rating}} ★</p>
+    <p class="card-text"> Rating Top: {{juegos.results[0].rating_top}} ★ </p>
+    <p class="card-text"> Lojas: {{juegos.results[0].stores[0].store.name}}, {{juegos.results[0].stores[1].store.name}}, {{juegos.results[0].stores[2].store.name}}, {{juegos.results[0].stores[3].store.name}}, {{juegos.results[0].stores[4].store.name}}</p>
+    <p class="card-text"> Rating: {{juegos.next}} ★</p>
+    <p class="card-text"><small class="text-muted">Updated: {{juegos.results[0].updated | date}}</small></p>
+  </div>
+</div>
+
+<img [src]="juegos.results[0].short_screenshots[2].image" class="card-img" alt="...">
+
+
+</div>
+
+

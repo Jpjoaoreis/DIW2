@@ -1,0 +1,88 @@
+<div class="bb">
+
+<h2>Lista de Games (RAWG API)</h2>
+
+
+<hr>
+
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="quadro">
+    <div class="card mb-3" style="max-width: 1200px;" *ngFor="let juego of juegos" cdkDrag>
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img [src]="juego.background_image" width="300" class="card-img" alt="...">
+            <img *cdkDragPreview [src]="juego.background_image" width="5-50"  alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title">{{juego.name}}</h1>
+              <p class="card-text"><small class="text-muted">Lançamento: {{juego.released}}</small></p>
+            </div>
+          </div>
+          <button class="btn btn-block btn-outline-success"[routerLink]="['/detalle',juego.slug]"  routerLinkActive="router-link-active" onkeyup="contador()">Ver detalhes do Game</button>
+
+
+<script>
+
+function contador(){
+  let cont;
+
+
+  if(this.juego.results[0].id===41494){
+  cont=0;
+
+}
+
+if(this.juego.results[1].id===7714){
+  cont=1;
+
+}
+
+if(this.juego.results[2].id===41494){
+  cont=2;
+
+}
+
+return cont;
+
+console.log(cont)
+
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<div class="footer">
+
+
+
+                  <div class="rodape">
+
+                        <h3> Copyright 2022 - Disciplina de Desenvolvimento de Interfaces Web - ICEI PUC Minas </h3> <br>
+                        <h4> &nbsp;&nbsp;&nbsp;&nbsp;Bernardo Parreiras Prado </h4><br>
+                        <h5> &nbsp;&nbsp;&nbsp;&nbsp;Matrícula: 765385 </h5><br>
+
+
+
+</div>
+
+</div>
+
